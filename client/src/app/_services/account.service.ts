@@ -17,11 +17,13 @@ export class AccountService {
         if(user){
           localStorage.setItem('user', JSON.stringify(user));
           this.currentUser.set(user);
+          console.log(model);
+          console.log(user);
+          console.log(this.currentUser());
         }
       })
     )
   }
-
   register(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
       map(user =>{
