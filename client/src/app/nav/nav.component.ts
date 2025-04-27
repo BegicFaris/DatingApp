@@ -28,6 +28,6 @@ export class NavComponent {
   }
   logout() {
     this.accountService.logout();
-    this.router.navigateByUrl('');
+
   }
 }

@@ -31,7 +31,7 @@ export class AccountService {
           localStorage.setItem('user', JSON.stringify(user));
           this.currentUser.set(user);
         }
-        return user;
+        return user;  
       })
     )
   }
@@ -40,5 +40,4 @@ export class AccountService {
     localStorage.removeItem('user');
     this.currentUser.set(null);  
   }
-
 }

@@ -17,13 +17,7 @@ export class RegisterComponent {
   model: any = {};
 
   register() {
-    this.accountService.register(this.model).subscribe({
-      next: response=>{
-        console.log(response);
-        this.cancle();
-      },
-      error: error=> this.toastr.error(error.error)
-    })
+    this.accountService.register(this.model)
   }
   cancle() {
     this.cancleRegister.emit(false);
